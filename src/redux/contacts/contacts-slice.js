@@ -9,10 +9,11 @@ const handlePending = state => {
 const handleRejected = (state, action) => {
   state.isLoading = false;
   state.error = action.payload;
+ 
 };
 
 const INITIAL_STATE = {
-  items: null,
+  items: [],
   isLoading: false,
   error: null,
 }
@@ -28,6 +29,7 @@ const contactsSlice = createSlice({
   .addCase(
     fetchAllContacts.fulfilled,(state, action) => {
               state.isLoading = false;
+              console.log(action.payload);
               state.error = null;
               state.items = action.payload;
             }
