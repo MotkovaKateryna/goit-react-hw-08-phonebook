@@ -11,8 +11,7 @@ export const selectError = state => state.contacts.error;
 export const selectVisibleContacts = createSelector(
   [ selectAllContacts, selectFilter],
    (contacts, filter) => {
-    // console.log("Calculating task count. Now memoized!");
-     return contacts.filter(contact => contact.name.toLowerCase()
+     return (contacts || []).filter(contact => contact.name.toLowerCase()
       .includes(filter.toLowerCase()))
    }
   )

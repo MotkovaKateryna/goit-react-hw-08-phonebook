@@ -3,6 +3,7 @@ import { fetchAllContacts,addContact, deleteContact } from './contacts-operation
 
 const handlePending = state => {
   state.isLoading = true;
+  state.error = null;
 };
 
 const handleRejected = (state, action) => {
@@ -10,13 +11,16 @@ const handleRejected = (state, action) => {
   state.error = action.payload;
 };
 
+const INITIAL_STATE = {
+  items: null,
+  isLoading: false,
+  error: null,
+}
+
+
 const contactsSlice = createSlice({
   name: 'contacts',
-  initialState: {
-    items: [],
-    isLoading: false,
-    error: null,
-  },
+  initialState: INITIAL_STATE,
   extraReducers: builder => builder
   .addCase(
     fetchAllContacts.pending,handlePending

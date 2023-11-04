@@ -1,0 +1,17 @@
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    text-decoration: none;
+    display: inline-block;
+    
+    padding: 12px;
+    font-weight: 700;
+    color:green ;
+}
+.link:global(.active){
+    color:red ;
+}

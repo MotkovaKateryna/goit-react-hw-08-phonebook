@@ -22,7 +22,6 @@ const PhoneBook = () => {
   useEffect(()=>{
     dispatch(fetchAllContacts());
   },[dispatch])
-
    const isContacts = Boolean(visibleContacts.length);
     return (
       <div>
