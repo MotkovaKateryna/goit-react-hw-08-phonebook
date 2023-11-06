@@ -35,7 +35,7 @@ const LoginPage = () => {
         {errors.password && <span>This field is required</span>}
       </label>
      
-     <button type = "submit">Sign In</button>
+     <button  className={styles.btn} type = "submit">Sign In</button>
   
     </form>
   )

@@ -40,7 +40,7 @@ return (
       {errors.password && <span>This field is required</span>}
     </label>
    
-   <button type = "submit">Sign Up</button>
+   <button className={styles.btn} type = "submit">Sign Up</button>
 
   </form>
 )

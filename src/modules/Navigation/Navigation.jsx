@@ -22,14 +22,17 @@ dispatch(logOutThunk());
     <NavLink className ={styles.link} to ="/">Home</NavLink>
     {authenticated ?  
     <><NavLink className ={styles.link} to ="/contacts">Contacts</NavLink>
-     <p>Welcome,{userName.name}</p>
-        <button onClick={onLogOut}>Logout</button>     
+    <div className={styles.wrp}>
+       <p className={styles.welctext}> Welcome, {userName.name}</p>
+        <button className={styles.logout_btn} onClick={onLogOut}>Logout</button>  
+    </div>
+       
     </>
     :
-
-    <>
-    <NavLink className ={styles.link} to ="/login">Login</NavLink>
-    <NavLink className ={styles.link} to ="/register">Register</NavLink></>
+    <div className={styles.wrp}>
+     <NavLink className ={styles.link} to ="/login">Login</NavLink>
+    <NavLink className ={styles.link} to ="/register">Register</NavLink> 
+    </div>
      }
     
     

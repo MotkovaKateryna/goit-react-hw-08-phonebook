@@ -1,0 +1,27 @@
+.wrapper{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+
+}
+
+.section{
+    display: flex;
+    width: 800px;
+    justify-content: space-around;
+}
+
+.welctext{
+    color:red;
+    font-style: italic;
+}
+.head{
+    font-size: 28px;
+
+}
+.desc{
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    font-style: italic;   
+    text-align: center;
+    font-size: 20px; 
+}

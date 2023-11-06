@@ -24,22 +24,22 @@ const PhoneBook = () => {
   },[dispatch])
    const isContacts = Boolean(visibleContacts.length);
     return (
-      <div>
+      <div className={styles.outer_wrapper}>
         <div className={styles.wrapper}>
           <div className={styles.block}>
             <h2 className={styles.title}>Phonebook</h2>
             <ContactsForm />
           </div>
-          {isLoading && !error && <Loader/>}
           <div className={styles.block}>
             <h2 className={styles.title}>Contacts</h2>
             <ContactsFilter/>
             {isContacts && (
               <ContactList />
-            )}
+              )}
             {!isContacts && <p className={styles.notif}>No contacts in list</p>}
           </div>
         </div>
+              {isLoading && !error && <Loader/>}
       </div>
     );
 
